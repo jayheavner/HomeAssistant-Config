@@ -1,0 +1,15 @@
+platform: webostv
+host: 192.168.3.16
+name: Family Room LG OLED  
+timeout: 5
+filename: webostv.conf
+customize:
+  sources:
+    - Denon AVR
+    - LiveTV
+    - Netflix
+    - Amazon Prime Video
+turn_on_action:
+  service: wake_on_lan.send_magic_packet
+  data:
+    mac: 38:8c:50:e8:f3:53

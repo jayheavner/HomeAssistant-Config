@@ -1,0 +1,5 @@
+media_tvs:
+  name: TVs
+  entities:
+    - media_player.panasonic_viera_tv
+    - media_player.family_room_lg_oled

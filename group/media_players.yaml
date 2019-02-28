@@ -1,0 +1,11 @@
+home_audio_devices:
+  name: Devices
+    - media_player.living_room
+
+monoprice_sources:
+  name: Monoprice Sources Group
+  entities:
+    - media_player.house_sonos
+    - media_player.house_chromecast_audio
+    - media_player.tivo
+    - media_player.house_echo

@@ -1,0 +1,5 @@
+platform: denonavr
+host: 192.168.3.11
+name: Denon - Family Room
+show_all_sources: True
+timeout: 30

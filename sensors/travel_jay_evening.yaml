@@ -1,0 +1,7 @@
+platform: google_travel_time
+name: Jay evening commute
+api_key: !secret google_maps_key
+origin: zone.cta
+destination: zone.home
+options:
+  mode: driving

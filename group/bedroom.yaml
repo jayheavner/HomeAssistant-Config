@@ -1,0 +1,7 @@
+bedroom_sensors:
+  name: Bedroom Sensors
+  entities:
+    - binary_sensor.bedroom_motion
+    - sensor.bedroom_temperature
+    - sensor.bedroom_humidity
+    - sensor.bedroom_luminance

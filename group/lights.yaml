@@ -1,0 +1,112 @@
+christmas_lights:
+  name: Christmas!
+  entities:
+    - switch.christmas_tree
+    - switch.christmas_lights
+    - switch.window_lights
+
+first_floor_lights:
+  name: First Floor
+  entities: 
+    - light.living_room
+    - light.dining_room
+    - light.kitchen
+    - switch.island_lights
+    - switch.cabinet_lights
+    - switch.first_floor_stair_lights
+    - switch.front_porch_lights
+    - switch.deck_lights
+
+second_floor_lights:
+  name: Second Floor
+  entities:
+    - light.bedroom
+    - light.nursery
+    - switch.first_floor_stair_lights
+    - switch.hall_lights
+    - light.second_floor_stairs
+
+hall_lights:
+  name: Hall
+  entities:
+    - switch.first_floor_stair_lights
+    - switch.hall_lights
+    - light.second_floor_stairs
+
+third_floor_lights:
+  name: Third Floor
+  entities:
+    - light.family_room
+    - light.guest_room
+    - switch.balcony_lights
+    
+outdoor_lights:
+  name: Outdoor
+  entities:
+    - switch.front_porch_lights
+    - switch.deck_lights
+    - switch.balcony_lights
+
+main_outdoor_lights:
+  name: Main Outdoor Lights
+  control: hidden
+  entities:
+    - switch.front_porch_lights
+    - switch.deck_lights
+
+indoor_lights:
+  name: Indoor Lights
+  control: hidden
+  entities:
+    - light.living_room
+    - light.dining_room
+    - light.kitchen
+    - switch.island_lights
+    - switch.cabinet_lights
+    - switch.first_floor_stair_lights
+    - light.bedroom
+    - light.nursery
+    - switch.hall_lights
+    - light.second_floor_stairs
+    - light.family_room
+    - light.guest_room
+
+good_morning:
+  name: Good Morning Lights
+  control: hidden
+  entities:
+    - group.first_floor_lights
+    - light.master_bedroom
+    - switch.hall_lights
+    - switch.first_floor_stair_lights
+
+house_lights:
+  name: All
+  control: hidden
+  entities:
+    - light.living_room
+    - light.dining_room
+    - light.kitchen
+    - switch.island_lights
+    - switch.cabinet_lights
+    - switch.front_porch_lights
+    - switch.deck_lights
+    - switch.first_floor_stair_lights
+    - switch.hall_lights
+    - light.nursery
+    - light.bedroom
+    - light.second_floor_stairs
+    - light.family_room
+    - light.guest_room
+    - switch.balcony_lights
+
+display_lights:
+  name: Display Lights
+  control: hidden
+  entities:
+    - group.first_floor_lights
+    - group.second_floor_lights
+    - group.third_floor_lights
+    - group.hall_lights
+    - group.outdoor_lights
+    - group.house_lights

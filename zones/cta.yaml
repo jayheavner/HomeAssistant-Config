@@ -1,0 +1,5 @@
+name: CTA
+latitude: !secret cta_lat
+longitude: !secret cta_long
+radius: 250
+icon: mdi:worker

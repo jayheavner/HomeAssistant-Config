@@ -1,0 +1,5 @@
+sensors_weather_group:
+  name: Weather Sensors
+  entities:
+    - sensor.darksky_temperature
+    - sensor.darksky_humidity

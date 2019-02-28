@@ -1,0 +1,41 @@
+sensor.bedroom_temperature:
+  ignored: false
+  polling_intensity: 1
+switch.front_porch:
+  refresh_value: true
+light.living_room:
+  polling_intensity: 1
+  refresh_value: true
+light.dining_room:
+  polling_intensity: 1
+  refresh_value: true
+light.kitchen:
+  polling_intensity: 1
+  refresh_value: true
+switch.island:
+  refresh_value: true
+switch.cabinet_lights:
+  refresh_value: true
+switch.deck_lights:
+  refresh_value: true
+switch.first_floor_stairs:
+  refresh_value: true
+switch.hall:
+  refresh_value: true
+light.front_bedroom:
+  polling_intensity: 1
+  refresh_value: true
+light.master_bedroom:
+  polling_intensity: 1
+  refresh_value: true
+light.second_floor_stairs:
+  polling_intensity: 1
+  refresh_value: true
+light.family_room:
+  polling_intensity: 1
+  refresh_value: true
+switch.balcony:
+  refresh_value: true
+light.guest_room:
+  polling_intensity: 1
+  refresh_value: true

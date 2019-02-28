@@ -1,0 +1,229 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: 1431 D St SE
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret d_street_lat
+  longitude: !secret d_street_long
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 125
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: !secret timezone
+  
+  # Customization file
+  customize: !include customize.yaml
+  packages: !include_dir_named packages
+
+# Enables the frontend
+frontend:
+
+system_health:
+
+# Enables configuration UI
+config:
+
+ifttt:
+  key: !secret ifttt_key
+
+ios:
+
+http:
+  # Secrets are defined in the file secrets.yaml
+  api_password: !secret api_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  #ssl_certificate: /ssl/fullchain.pem
+  #ssl_key: /ssl/privkey.pem
+  cors_allowed_origins:
+    - http://localhost
+    - http://localhost:5005
+    - http://localhost:8080
+    - http://localhost:8080/
+    - https://home/beavners.com
+    - https://home/beavners.com/
+    - http://192.168.3.5:7080
+    - http://192.168.3.5:7080/
+    - http://192.168.3.5:8123
+    - http://192.168.3.5:8123/
+    - http://192.168.3.6:1880
+    - http://192.168.3.6:1880/
+  trusted_networks:
+    - 127.0.0.1
+    - 192.168.0.0/24
+    - 192.168.1.0/24
+
+  #ip_ban_enabled: True
+  #login_attempts_threshold: 5
+  base_url: https://home.beavners.com
+  # base_url: 192.168.3.5:8123
+  use_x_forwarded_for: True
+  trusted_proxies:
+    - !secret trusted_proxies
+  #  - 127.0.0.1
+
+api:
+
+websocket_api:
+
+#duckdns:
+#  domain: beavners
+#  access_token: 2e37140c-3b5c-47fc-b57d-1a45b4f3eb6d
+
+zwave:
+  usb_path: /dev/ttyACM0
+  network_key: "0xBD, 0x97, 0xD0, 0x88, 0x8B, 0x54, 0x9A, 0x19, 0xDB, 0x9C, 0x53, 0xE4, 0x81, 0x0D, 0x40, 0x91"
+  polling_interval: 60000
+  device_config: !include zwave_device_config.yaml
+  config_path: zwave-config/config
+  debug: true
+
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
+  
+ring:
+  username: !secret gmail_username
+  password: !secret ring_password
+
+binary_sensor:
+  - platform: ring
+
+  # - platform: mqtt
+  #   name: "Bedroom motion"
+  #   state_topic: "smartthings/Bedroom sensor/motion/state"
+  #   icon: mdi:run-fast
+  #   payload_on: "active"
+  #   payload_off: "inactive"
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+python_script:
+
+# Text to speech
+tts:
+  - platform: google
+
+# Cloud
+cloud:
+
+switch:
+  - platform: vesync
+    username: !secret gmail_username
+    password: !secret vesync
+  - platform: tplink
+    host: 192.168.3.153
+    name: Christmas tree
+
+# light: !include light.yaml
+#automation: !include automations.yaml
+sensor: !include_dir_list sensors
+#switch: !include switches.yaml
+#script: !include scripts.yaml
+media_player: !include_dir_list media_players
+group: !include_dir_merge_named group/
+zone: !include_dir_list zones
+
+mqtt:
+  broker: !secret mqtt_ip
+  discovery: true
+  discovery_prefix: smartthings
+  client_id: home-assistant
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+
+device_tracker:
+  - platform: owntracks
+    mac: !secret jay_iphone_mac
+    track_new_devices: no
+    # You'll want to change the above to 'no' once your system finds your devices. Say after 24 hours or so. Turn it back on for a bit if you get a new gadget.
+    max_gps_accuracy: 200
+    waypoints: True
+    mqtt_topic: owntracks/#
+    events_only: True
+    consider_home: 0:03
+    waypoint_whitelist:
+      - jay
+      - kim
+    region_mapping:
+      CTA: work
+      USGBC: work
+      Home: home
+      
+  - platform: nmap_tracker
+    hosts:
+      - !secret jay_iphone_ip
+      - !secret kim_iphone_ip
+      # Highly recommended: assign IP address for devices you want to track so you can know where to find them. These are the IP addresses for the three iPhones I'm tracking.
+    home_interval: 10
+    interval_seconds: 30
+#    region_mapping:
+#      office: work
+
+# lock:
+#   - platform: mqtt
+#     name: Front Door
+#     state_topic: "ssmartthings/Front Door/lock/state"
+#     command_topic: "smartthings/Front Door/lock/cmd"
+#     payload_lock: "locked"
+#     payload_unlock: "unlocked"
+#     optimistic: false
+#     qos: 1
+#     retain: true
+#     value_template: '{{ value.lock }}'
+
+input_boolean:
+  vacation_mode:
+    name: Vacation mode
+    initial: off
+    icon: mdi:beach
+
+input_text:
+  jay_location:
+    name: Jay Location
+  kim_location:
+    name: Kim Location
+  spotify_refresh_token:
+    name: Spotify Refresh Token
+    max: 255
+
+input_select:
+  modes:
+    name: Home Modes
+    options:
+      - "Weekday Good Morning"
+      - "Weekend Good Morning"
+      - "Good Night"
+      - "Away"
+      - "Vacation"
+
+logger:
+  default: error
+  logs:
+#    homeassistant.components.media_player.spotify: info
+    homeassistant.components.mqtt: debug
+#    homeassistant.components.zwave: debug

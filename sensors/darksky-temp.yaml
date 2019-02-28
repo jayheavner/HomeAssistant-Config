@@ -1,0 +1,8 @@
+platform: darksky
+name: Darksky Temperature
+api_key: !secret darksky_key
+update_interval: '00:10:00'
+unit_of_measurement: '°F'
+icon: mdi:temperature-fahrenheit
+monitored_conditions:
+  - temperature

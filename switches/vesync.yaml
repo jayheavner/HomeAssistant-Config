@@ -1,0 +1,3 @@
+- platform: vesync
+  username: !secret gmail_username
+  password: !secret vesync

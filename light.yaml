@@ -1,0 +1,141 @@
+# First Floor
+# - platform: mqtt
+#   name: "Living Room Lights"
+#   state_topic: "smartthings/Living Room Lights/switch/state"
+#   command_topic: "smartthings/Living Room Lights/switch/cmd"
+#   brightness_state_topic: "smartthings/Living Room Lights/level/state"
+#   brightness_command_topic: "smartthings/Living Room Lights/level/cmd"
+#   brightness_scale: 100
+#   qos: 0
+#   payload_on: "on"
+#   payload_off: "off"
+#   optimistic: false
+
+# - platform: mqtt 
+#   name: "Dining Room Lights"
+#   state_topic: "smartthings/Dining Room Lights/State"
+#   command_topic: "smartthings/Dining Room Lights/State/Set"
+#   brightness_state_topic: "smartthings/Dining Room Lights/Brightness"
+#   brightness_command_topic: "smartthings/Dining Room Lights/level/cmd"
+#   brightness_scale: 100
+#   qos: 0
+#   payload_on: "on"
+#   payload_off: "off"
+#   optimistic: false
+
+# - platform: mqtt
+#   name: "Kitchen Lights"
+#   state_topic: "smartthings/Kitchen Lights/switch/state"
+#   command_topic: "smartthings/Kitchen Lights/switch/cmd"
+#   brightness_state_topic: "smartthings/Kitchen Lights/level/state"
+#   brightness_command_topic: "smartthings/Kitchen Lights/level/cmd"
+#   brightness_scale: 100
+#   qos: 0
+#   payload_on: "on"
+#   payload_off: "off"
+#   optimistic: false
+
+# - platform: mqtt
+#   name: "Stair Lights - First Floor"
+#   state_topic: "smartthings/Stair Lights - First Floor/switch/state"
+#   command_topic: "smartthings/Stair Lights - First Floor/switch/cmd"
+#   brightness_state_topic: "smartthings/Stair Lights - First Floor/level/state"
+#   brightness_command_topic: "smartthings/Stair Lights - First Floor/level/cmd"
+#   brightness_scale: 100
+#   qos: 0
+#   payload_on: "on"
+#   payload_off: "off"
+#   optimistic: false
+
+# # Second Floor
+# - platform: mqtt
+#   name: "Master Bedroom Lights"
+#   state_topic: "smartthings/Master Bedroom Lights/switch/state"
+#   command_topic: "smartthings/Master Bedroom Lights/switch/cmd"
+#   brightness_state_topic: "smartthings/Master Bedroom Lights/level/state"
+#   brightness_command_topic: "smartthings/Master Bedroom Lights/level/cmd"
+#   brightness_scale: 100
+#   qos: 0
+#   payload_on: "on"
+#   payload_off: "off"
+#   optimistic: false
+
+# # Hall lights
+# - platform: mqtt
+#   name: "Hall Lights"
+#   state_topic: "smartthings/Hall Lights/switch/state"
+#   command_topic: "smartthings/Hall Lights/switch/cmd"
+#   # brightness_state_topic: "smartthings/Hall Lights/level/state"
+#   # brightness_command_topic: "smartthings/Hall Lights/level/cmd"
+#   # brightness_scale: 100
+#   # brightness_value_template: "{{ value_json.brightness }}"
+#   # qos: 0
+#   payload_on: "on"
+#   payload_off: "off"
+#   optimistic: false
+
+# - platform: mqtt
+#   name: "Stair Lights - First Floor"
+#   state_topic: "smartthings/Stair Lights - First Floor/switch/state"
+#   command_topic: "smartthings/Stair Lights - First Floor/switch/cmd"
+#   # brightness_state_topic: "smartthings/Stair Lights - First Floor/level/state"
+#   # brightness_command_topic: "smartthings/Stair Lights - First Floor/level/cmd"
+#   # brightness_scale: 100
+#   # brightness_value_template: "{{ value_json.brightness }}"
+#   # qos: 0
+#   payload_on: "on"
+#   payload_off: "off"
+#   optimistic: false
+
+# - platform: mqtt
+#   name: "Stair Lights - Second Floor"
+#   state_topic: "smartthings/Stair Lights - Second Floor/switch/state"
+#   command_topic: "smartthings/Stair Lights - Second Floor/switch/cmd"
+#   brightness_state_topic: "smartthings/Stair Lights - Second Floor/level/state"
+#   brightness_command_topic: "smartthings/Stair Lights - Second Floor/level/cmd"
+#   brightness_scale: 100
+#   qos: 0
+#   payload_on: "on"
+#   payload_off: "off"
+#   optimistic: false
+
+# Third Floor
+# - platform: mqtt
+#   name: "Family Room Lights"
+#   state_topic: "smartthings/Family Room Lights/Switch"
+#   command_topic: "smartthings/Family Room Lights/Switch/Set"
+#   brightness_state_topic: "smartthings/Family Room Lights/Switch/Brightness"
+#   brightness_command_topic: "smartthings/Family Room Lights/SwitchBrightness/Set"
+#   brightness_scale: 100
+#   qos: 0
+#   payload_on: "on"
+#   payload_off: "off"
+#   optimistic: false
+
+# Outdoors
+# - platform: mqtt
+#   name: "Front Porch Lights"
+#   state_topic: "smartthings/Front Porch Lights/switch/state"
+#   command_topic: "smartthings/Front Porch Lights/switch/cmd"
+#   payload_off: "off"
+#   payload_on: "on"
+#   optimistic: false
+#   retain: true
+
+# - platform: mqtt
+#   name: "Deck Lights"
+#   state_topic: "smartthings/Deck Lights/switch/state"
+#   command_topic: "smartthings/Deck Lights/switch/cmd"
+#   payload_off: "off"
+#   payload_on: "on"
+#   optimistic: false
+#   retain: true
+
+# - platform: mqtt
+#   name: "Balcony Lights"
+#   state_topic: "smartthings/Balcony lights/Switch"
+#   command_topic: "smartthings/Balcony lights/Switch/Set"
+#   payload_off: 0
+#   payload_on: 255
+#   optimistic: false
+#   retain: true

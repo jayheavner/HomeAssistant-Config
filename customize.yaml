@@ -1,0 +1,11 @@
+media_player.back_deck_speaker:
+  friendly_name: Back Deck Speaker
+  icon: mdi:home
+light.family_room_lights_level:
+  entity_id: light.family_room
+  friendly_name: Family Room Lights
+lock.unknown_node_21_locked:
+  friendly_name: Front Door
+zwave.unknown_node_10:
+  friendly_name: Guest Room Lights
+  node_name: Guest Room

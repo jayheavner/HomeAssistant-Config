@@ -1,0 +1,5 @@
+name: Home
+latitude: !secret d_street_lat
+longitude: !secret d_street_long
+radius: 150
+icon: mdi:account-multiple

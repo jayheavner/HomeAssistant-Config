@@ -1,0 +1,58 @@
+default_view:
+ name: Home
+ view: true
+ icon: mdi:home
+ entities:
+ - updater.updater
+ - group.christmas_lights
+ - lock.front_door
+ - camera.front_porch
+ - camera.deck
+ - sensor.jay_morning_commute
+ - sensor.bedroom_humidty
+lights_view:
+  name: Lights
+  view: yes
+  entities:
+    - group.first_floor_lights
+    - group.second_floor_lights
+    - group.hall_lights
+    - group.third_floor_lights
+    - group.outdoor_lights
+
+speakers_view:
+  name: Speakers
+  view: yes
+  entities:
+    - group.home_audio_speakers
+
+monoprice_sources_view:
+  name: Monoprice Sources
+  icon: mdi:music
+  view: yes
+  entities:
+    - group.monoprice_sources
+
+tv_view:
+  name: TV
+  view: yes
+  icon: mdi:television
+  entities:
+    - group.media_tvs
+    - media_player.living_room_tivo
+    
+avr_view:
+  name: Denon
+  view: yes
+  entities:
+    - group.media_avr
+    - media_player.spotify
+    
+weather_view:
+  name: Weather
+  view: true
+  icon: mdi:weather-partlycloudy
+  entities:
+  - group.weather_card_today
+  - group.weather_card_forecast
+  - group.bedroom_sensors

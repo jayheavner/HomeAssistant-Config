@@ -1,0 +1,8 @@
+platform: tivo
+host: 192.168.3.20
+name: Living Room Tivo
+port: 31339
+device: 0
+debug: 0
+zapuser: !secret gmail_username
+zappass: !secret zap2it_pass

@@ -1,0 +1,4 @@
+
+platform: dnsip
+hostname: !secret duckdns_host_name
+resolver: 8.8.8.8

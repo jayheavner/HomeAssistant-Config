@@ -1,0 +1,24 @@
+platform: monoprice
+port: /dev/ttyUSB0
+zones:
+  11:
+    name: Living Room Speaker
+  12: 
+    name: Back Deck Speaker
+  13:
+    name: Master Bedroom Speaker
+  14:
+    name: Family Room Speaker
+  15:
+    name: Balcony Speaker
+  16:
+    name: Guest Room Speaker
+sources:
+  2: 
+    name: House Sonos
+  3:
+    name: Heos
+  4:
+    name: Tivo
+  5:
+    name: House Echo

@@ -1,0 +1,22 @@
+platform: panasonic_viera
+host: 192.168.3.15
+
+# Example play_media script that can be triggered when someone is detected at the door
+#
+#script:
+#  front_door_camera:
+#    alias: "Show who's at the door"
+#    sequence:
+#      - service: media_player.turn_on
+#        data:
+#          entity_id: media_player.living_room_tv
+#      - service: media_player.play_media
+#        data:
+#          entity_id: media_player.living_room_tv
+#          media_content_type: "url"
+#          media_content_id: "http://google.com"
+#      - delay:
+#        seconds: 5
+#      - service: media_player.media_stop
+#        data:
+#          entity_id: media_player.living_room_tv
