@@ -1,0 +1,26 @@
+platform: template
+fans:
+  deck_fan:
+    friendly_name: "Deck Fan"
+    value_template: "{{ states('light.deck_fan') }}"
+    speed_template: >
+      {% set output = ['Low','Medium','High'] %}
+      {% set idx = state_attr('light.deck_fan', 'brightness') | int // 85 - 1 %}
+      {{ output[idx] }}
+    turn_on:
+      service: homeassistant.turn_on
+      entity_id: light.deck_fan
+    turn_off:
+      service: homeassistant.turn_off
+      entity_id: light.deck_fan
+    set_speed:
+      service: light.turn_on
+      entity_id: light.deck_fan
+      data_template:
+        brightness: >
+          {% set mapper = {'Low': 85, 'Medium': 170, 'High': 255} %}
+          {{ mapper[speed] }}
+    speeds:
+      - 'Low'
+      - 'Medium'
+      - 'High'

@@ -1,0 +1,31 @@
+- platform: switch
+  name: Island Lights
+  entity_id: switch.island_lights
+
+- platform: switch
+  name: Cabinet Lights
+  entity_id: switch.cabinet_lights
+
+- platform: switch
+  name: Porch Lights
+  entity_id: switch.porch_lights
+
+- platform: switch
+  name: Deck Lights
+  entity_id: switch.deck_lights
+
+- platform: switch
+  name: First Floor Stair Lights
+  entity_id: switch.first_floor_stair_lights
+
+- platform: switch
+  name: Hall Lights
+  entity_id: switch.hall_lights
+
+- platform: switch
+  name: Balcony Lights
+  entity_id: switch.balcony_lights
+
+- platform: switch
+  name: Nursery Lamp
+  entity_id: switch.nursery_lamp
