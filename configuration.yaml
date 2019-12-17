@@ -12,19 +12,19 @@ default_config:
 tts:
   - platform: google_translate
 
-dialogflow:
+# dialogflow:
 
-intent_script:
-  GetTemperature:
-    speech:
-      text: Ok
-    action:
-      - service: light.turn_on
-        data:
-          entity_id: light.bedroom
+# intent_script:
+#   GetTemperature:
+#     speech:
+#       text: Ok
+#     action:
+#       - service: light.turn_on
+#         data:
+#           entity_id: light.bedroom
 
 automation: !include automations.yaml
-device_tracker: !include_dir_list device_trackers
+#device_tracker: !include_dir_list device_trackers
 fan: !include fan.yaml
 group: !include groups.yaml
 light: !include lights.yaml
@@ -36,27 +36,69 @@ climate:
   - platform: sensibo
     api_key: !secret sensibo
 
-camera:
-  - platform: ring
+# camera:
+#   - platform: ring
 #   - platform: generic
 #     still_image_url: rtsp://192.168.3.101/hdmi
 #     stream_source: rtsp://192.168.3.101/hdmi
+
+# device_tracker:
+#   - platform: unifi
+#     host: 192.168.1.2
+#     port: 8443
+#     username: hass
+#     password: !secret unifi_hass_password
+#     verify_ssl: false
+#     track_new_devices: true
+
+# device_tracker:
+#   - platform: unifi_direct
+#     host: 192.168.1.11
+#     username: hass
+#     password: !secret unifi_hass_password
+#     new_device_defaults:
+#       track_new_devices: true
+#       hide_if_away: false
+
+#   - platform: unifi_direct
+#     host: 192.168.1.12
+#     username: hass
+#     password: !secret unifi_hass_password
+#     new_device_defaults:
+#       track_new_devices: true
+#       hide_if_away: false
+
+#   - platform: unifi_direct
+#     host: 192.168.1.13
+#     username: hass
+#     password: !secret unifi_hass_password
+#     new_device_defaults:
+#       track_new_devices: true
+#       hide_if_away: false
+
+#   - platform: unifi_direct
+#     host: 192.168.1.14
+#     username: hass
+#     password: !secret unifi_hass_password
+#     new_device_defaults:
+#       track_new_devices: true
+#       hide_if_away: false
 
 nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
 
-ring:
-  username: !secret jay_email
-  password: !secret ring_password
+# ring:
+#   username: !secret jay_email
+#   password: !secret ring_password
 
-binary_sensor:
-  - platform: ring
+# binary_sensor:
+#   - platform: ring
 
-spotcast:
-  username: !secret spotify_username
-  password: !secret spotify_password
-# stream:
+# spotcast:
+#   username: !secret spotify_username
+#   password: !secret spotify_password
+# # stream:
 
 # ifttt:
 #   key: !secret ifttt_key
@@ -64,24 +106,48 @@ spotcast:
 # websocket_api:
 # ios:
 
-zwave:
-  usb_path: /dev/serial/by-id/usb-0658_0200-if00
-  network_key: '0xBD, 0x97, 0xD0, 0x88, 0x8B, 0x54, 0x9A, 0x19, 0xDB, 0x9C, 0x53, 0xE4, 0x81, 0x0D, 0x40, 0x91'
-  polling_interval: 60000
-  device_config: !include zwave_device_config.yaml
-  config_path: /config/zwave-config
-  debug: false
-# custom_updater:
-#   card_urls:
-#     - https://raw.githubusercontent.com/MizterB/lovelace-secondaryinfo-entity-row/master/custom_cards.json
+# deconz:
+#   host: 192.168.3.3
+#   port: 4043
 
-input_boolean:
-  vacation_mode:
-    name: Vacation Mode
-    icon: mdi:airplane
+tplink:
+  # discovery: false
+  # switch:
+  #   - host: 192.168.3.175
+  #   - host: 192.168.3.176
+
+zwave:
+#   usb_path: /dev/serial/by-id/usb-0658_0200-if00
+#   network_key: '0xBD, 0x97, 0xD0, 0x88, 0x8B, 0x54, 0x9A, 0x19, 0xDB, 0x9C, 0x53, 0xE4, 0x81, 0x0D, 0x40, 0x91'
+#   polling_interval: 60000
+#   device_config: !include zwave_device_config.yaml
+#   config_path: /config/zwave-config
+# #  debug: true
+# # custom_updater:
+# #   card_urls:
+# #     - https://raw.githubusercontent.com/MizterB/lovelace-secondaryinfo-entity-row/master/custom_cards.json
+
+# input_boolean:
+#   vacation_mode:
+#     name: Vacation Mode
+#     icon: mdi:airplane
+
+# input_datetime:
+#   door_action_date:
+#     name: Door action last date
+#     has_date: true
+#     has_time: true
+
+# input_text:
+#   door_action:
+#     name: Door last action
+#   door_last_user:
+#     name: Door last user
 
 logger:
   default: error
   logs:
+    homeassistant.components.deconz: info
+    homeassistant.components.sensor: critical
     homeassistant.custom_components.spotcast.sensor: critical
-    homeassistant.components.zwave: info
+#     #homeassistant.components.zwave: info

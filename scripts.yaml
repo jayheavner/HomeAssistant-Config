@@ -1,12 +1,1 @@
-'1561399886331':
-  alias: Play Chromecast on Balcony Speaker
-  sequence:
-  - alias: ''
-    data:
-      device_name: House Chromecast
-      uri: spotify:artist:196lKsA13K3keVXMDFK66q
-    service: spotcast.start
-  - data:
-      entity_id: media_player.balcony_speaker
-      source: Chromecast
-    service: media_player.select_source
+{}

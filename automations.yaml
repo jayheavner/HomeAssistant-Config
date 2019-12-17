@@ -1,12 +1,11 @@
-alias: Create notifications for "service" errors
+alias: "IFTTT webhook for moisture"
 trigger:
   platform: event
-  event_type: system_log_event
-condition:
-  condition: template
-  value_template: '{{ "service" in trigger.event.data.message }}'
+  event_type: ifttt_webhook_received
+  event_data:
+    action: call_service
 action:
-  service: persistent_notification.create
+  service: notify.ios_jay_iphone
   data_template:
-    title: Something bad happened
-    message: '{{ trigger.event.data.message }}'
+    title: "Moisture detected"
+    message: "Moisture detected {{ trigger.event.data.DeviceName }} and {{ trigger.event.moisture_detected_at }}"
