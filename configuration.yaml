@@ -111,10 +111,10 @@ nest:
 #   port: 4043
 
 tplink:
-  # discovery: false
-  # switch:
-  #   - host: 192.168.3.175
-  #   - host: 192.168.3.176
+  discovery: false
+  switch:
+    - host: 192.168.3.175
+    - host: 192.168.3.176
 
 zwave:
 #   usb_path: /dev/serial/by-id/usb-0658_0200-if00

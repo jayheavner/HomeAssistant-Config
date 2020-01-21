@@ -12,7 +12,7 @@
 
 - platform: switch
   name: Deck Lights
-  entity_id: switch.deck_lights
+  entity_id: switch.deck
 
 - platform: switch
   name: First Floor Stair Lights
