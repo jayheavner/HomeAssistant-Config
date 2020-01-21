@@ -1,0 +1,30 @@
+platform: webostv
+host: 192.168.3.10
+name: Living Room TV
+standby_connection: true
+turn_on_action:
+  service: wake_on_lan.send_magic_packet
+  data:
+    mac: "60:ab:14:4a:89:0e"
+customize:
+  sources:
+    - Amazon Prime Video
+    - HDMI1
+    - HDMI3
+    - HDMI4
+    - Hulu
+    - Live TV
+    - Multi-view
+    - Netflix
+    - Notifications
+    - OLED Gallery
+    - Photo & Video
+    - Screen Share
+    - Search
+    - Showtime Anytime
+    - VUDU
+    - Web Browser
+    
+media_player:
+
+notify:
