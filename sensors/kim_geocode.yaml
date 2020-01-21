@@ -1,0 +1,6 @@
+platform: google_geocode
+name: Kim
+origin: device_tracker.kim_iphone_owntracks
+options: street, city
+gravatar: !secret kim_email
+api_key: !secret google_api_key

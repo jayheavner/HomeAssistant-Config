@@ -1,0 +1,7 @@
+platform: template
+sensors:
+  nursery_humidity:
+    value_template: '{{ states.climate.nursery.attributes.current_humidity }}'
+    friendly_name: 'Nursery Humidity'
+    unit_of_measurement: '%'
+    icon_template: mdi:water-percent

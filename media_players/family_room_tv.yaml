@@ -1,0 +1,29 @@
+platform: webostv
+host: 192.168.3.16
+name: Family Room TV
+filename: webostv.conf
+timeout: 5
+turn_on_action:
+  service: wake_on_lan.send_magic_packet
+  data:
+    mac: '38:8c:50:e8:f3:53'
+customize:
+  sources:
+    - AV
+    - Amazon Prime Video
+    - Denon AVR
+    - HDMI1
+    - HDMI3
+    - HDMI4
+    - Hulu
+    - Live TV
+    - Multi-view
+    - Netflix
+    - Notifications
+    - OLED Gallery
+    - Photo & Video
+    - Screen Share
+    - Search
+    - Showtime Anytime
+    - VUDU
+    - Web Browser

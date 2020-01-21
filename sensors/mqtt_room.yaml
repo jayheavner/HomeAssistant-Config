@@ -1,0 +1,4 @@
+platform: mqtt_room
+device_id: device_tracker.jay_iphone
+name: Living room mqtt sensor
+state_topic: mqtt_room

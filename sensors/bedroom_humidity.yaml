@@ -1,0 +1,7 @@
+platform: template
+sensors:
+  bedroom_humidity:
+    value_template: '{{ states.climate.bedroom.attributes.current_humidity }}'
+    friendly_name: 'Bedroom Humidity'
+    unit_of_measurement: '%'
+    icon_template: mdi:water-percent

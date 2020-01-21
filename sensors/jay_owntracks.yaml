@@ -1,0 +1,6 @@
+platform: google_geocode
+name: jay
+origin: device_tracker.jay_iphone_owntracks
+options: street, city
+gravatar: !secret jay_email
+api_key: !secret google_api_key
