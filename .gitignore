@@ -7,6 +7,10 @@
 !.gitignore
 !*.md
 !*.xml
+!zwave-config
+!zwave-fork
+!media_players/
+!sensors/
 
 # Ignore folders.
 .storage
